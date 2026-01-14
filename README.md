@@ -4,6 +4,8 @@ This repository contains the code implementation for an automated aquaculture po
 
 This project is an **adaptation and extension** of the Object-Oriented method proposed by [Li et al. (2023)](https://doi.org/10.3390/rs15030856), enhanced with **Sentinel-1 SAR integration** and scaled down for **1-meter Deep Resolution (S2DR3)** imagery using local Python processing.
 
+S2DR3 Source : https://colab.research.google.com/drive/18phbwA1iYG5VDGN2WjK7WrWYi-FdCHJ5#scrollTo=XoCA_oizWi_g 
+
 ## 📌 Adaptation & Modifications
 While the core geometric constraints are inspired by Li et al., this project introduces several key modifications to suit local conditions and high-resolution data:
 
@@ -35,39 +37,13 @@ The code is divided into Cloud-based (Google Earth Engine) and Local (Python) pr
     * **Morphological Cleaning:** Large kernel opening to separate ponds from the sea.
     * **Geometric Filter:** Strict shape analysis (Area, LSI < 2.0, RPOC < 1.6).
 
-## 🚀 Methodology Workflow
 
-The following flowchart illustrates the workflow for the High-Resolution (Script 03) adaptation:
-
-```mermaid
-graph TD
-    A[Input: S2DR3 1m Imagery] --> B[Spectral Analysis]
-    B --> B1[NDWI > -0.10]
-    B --> B2[NDVI < 0.35]
-    B --> B3[NIR < 3500]
-    
-    B1 & B2 & B3 --> C[Morphological Separation]
-    C --> C1[Kernel 5x5 Opening<br/>(Disconnect Sea/Ocean)]
-    
-    C1 --> D[Vectorization]
-    D --> E[Double Buffer Smoothing]
-    E --> E1[Buffer +2.0m]
-    E --> E2[Buffer -2.0m]
-    
-    E2 --> F[Geometric Constraints]
-    F --> F1[Area: 300 - 150k m²]
-    F --> F2[LSI ≤ 2.0]
-    F --> F3[RPOC ≤ 1.6]
-    
-    F --> G[Final Shapefile Output]
-	
-	
-	
-	
-	Requirements (For Script 03)
+Requirements (For Script 03)
 To run the local Python script, ensure you have the following libraries installed:
 
-pip install rasterio geopandas shapely opencv-python numpy
+**pip install rasterio geopandas shapely opencv-python numpy**
+
+
 
 
 Reference & Citation
