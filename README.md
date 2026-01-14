@@ -6,6 +6,8 @@ This project is an **adaptation and extension** of the Object-Oriented method pr
 
 S2DR3 Source : https://colab.research.google.com/drive/18phbwA1iYG5VDGN2WjK7WrWYi-FdCHJ5#scrollTo=XoCA_oizWi_g 
 
+Reference : https://github.com/designer1024/Single_Object_Aquaculture_Ponds_Extraction
+
 ## 📌 Adaptation & Modifications
 While the core geometric constraints are inspired by Li et al., this project introduces several key modifications to suit local conditions and high-resolution data:
 
@@ -50,3 +52,4 @@ Reference & Citation
 This project adapts the methodology described in:
 
 Li, B.; Gong, A.; Chen, Z.; Pan, X.; Li, L.; Li, J.; Bao, W. An Object-Oriented Method for Extracting Single-Object Aquaculture Ponds from 10 m Resolution Sentinel-2 Images on Google Earth Engine. Remote Sens. 2023, 15, 856. https://doi.org/10.3390/rs15030856
+
