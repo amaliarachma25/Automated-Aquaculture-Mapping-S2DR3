@@ -1,0 +1,7 @@
+rasterio
+geopandas
+shapely
+opencv-python
+numpy
+geemap
+earthengine-api
